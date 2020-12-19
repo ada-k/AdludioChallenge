@@ -283,12 +283,17 @@ function populate_form(data){
 
     // task 1.
     // var keys holds the data keys. values are retrieved though data[key] for key in keys indexing
-    var keys = Object.keys(data);
-    for (var key in keys) {
-        form_html = "<label for='"+ key +"'>key</label><select name='"+ key +"'> ";
-        for (var i in data[key]) {
-            form_html += "<option value= '" + i +"'' > + i + </option></select>";
-        }
+   // var keys = Object.keys(data);
+   // for (var key in keys) {
+     //   form_html = "<label for='"+ key +"'>key</label><select name='"+ key +"'> ";
+     //   for (var i in data[key]) {
+     //       form_html += "<option value= '" + i +"'' > + i + </option></select>";
+     //   }
+   // }
+    
+    for (var i = data.keys().length - 1; i >= 0; i--) {
+        form_html = "<label for='data.keys()[i]'>data.keys()[i]</label><select name='data.keys()[i]'> "
+        form_html += "<option value='data[i]'></option></select>"
     }
 
 
