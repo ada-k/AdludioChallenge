@@ -35,10 +35,10 @@ class FlaskTests(unittest.TestCase):
 
 
     # route test (check status code)
-	def test_homepage(self):
-		test = app.test_client(self)
-		response = test.get('/demo1')
-		self.assertEqual(response.status_code, 200)
+    def test_homepage(self):
+	test = app.test_client(self)
+	response = test.get('/demo1')
+	self.assertEqual(response.status_code, 200)
 
 if __name__ == '__main__':
 	unittest.main()
