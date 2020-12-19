@@ -26,12 +26,12 @@ class FlaskTests(unittest.TestCase):
     # calculate_score test - return type
     def test_calculate_score(self):
         val = int(calculate_score(self.arr2))
-        assert_equal(isinstance(val, int), True)
+        self.assert_equal(isinstance(val, int), True)
 
 
     # calculate_rates test - return type
     def test_calculates_rates(self):
-        assert_equal(isinstance(calculate_rates(self.arr1, self.arr2), np.ndarray), True)
+        self.assert_equal(isinstance(calculate_rates(self.arr1, self.arr2), np.ndarray), True)
 
 
     # route test (check status code)
